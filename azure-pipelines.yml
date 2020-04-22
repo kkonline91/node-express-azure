@@ -25,7 +25,5 @@ steps:
     includeRootFolder: TRUE
     
 - task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: $(System.DefaultWorkingDirectory)/bin/WebApp
-    artifactName: WebApp
+  
   
