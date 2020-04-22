@@ -28,8 +28,6 @@ steps:
 Source Folder: $(build.sourcesdirectory)
 Contents: mybuild.msi
 Target Folder: $(build.artifactstagingdirectory)
-Task: Publish Build Artifacts
-Path to publish: $(build.artifactstagingdirectory)
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifacts: drop'
