@@ -28,14 +28,9 @@ steps:
 - task: PublishBuildArtifacts@1
   #displayName: 'Publish artifacts: drop'
 
-
-
-- task: CopyFiles@2
-  inputs:
-    contents: '_buildOutput/**'
-    targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
-    pathToPublish: $(Build.ArtifactStagingDirectory)
-    artifactName: MyBuildOutputs
+    PathtoPublish: $(System.DefaultWorkingDirectory)/bin/Any CPU/Release/netcoreapp3.1
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
   
